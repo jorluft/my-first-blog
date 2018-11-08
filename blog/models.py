@@ -17,3 +17,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Articleupload(models.Model):
+    title = models.TextField()
+    text = models.TextField()
+    postdate = models.DateField(default=timezone.now)
+    imageurl = models.TextField()

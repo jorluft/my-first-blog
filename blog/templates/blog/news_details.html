@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<img class="newsdetailimage" src="{{articles.imageurl}}">
+    <div class="newsdetail">
+        {% if articles.postdate %}
+            <div class="date">
+                {{articles.postdate }}
+            </div>
+        {% endif %}
+
+        <h2>{{ articles.title }}</h2>
+        <p>{{ articles.text|linebreaksbr }}</p>
+    </div>
+
+{% endblock %}
